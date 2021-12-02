@@ -1,0 +1,769 @@
+===========================================================================
+         ________    _________   _______       __     _________            
+        |        |\ |        |\ |       \\    |  |\  /         \\          
+        |    ____|| |    ____|| |    __  ||   |__|| |    ___    ||         
+        |   |\___\| |   |\___\| |   |\_| ||    \_\| |   //  \   ||         
+        |   ||__    |   ||__    |   ||_| ||   |  |\ |  ||    |  ||         
+        |       |\  |       |\  |         \\  |  || |  ||    |  ||         
+        |    ___||  |    ___||  |    ___   || |  || |  ||    |  ||         
+        |   |\__\|  |   |\__\|  |   |\__|  || |  || |  ||    |  ||         
+        |   ||      |   ||___   |   ||__|  || |  || |   \\__/   ||         
+        |   ||      |        |\ |          || |  || |           ||         
+        |___||      |________|| |_________//  |__||  \_________//          
+                                                                           
+      F I N I T E   E L E M E N T S   F O R   B I O M E C H A N I C S      
+                                                                           
+  version 3.4.0.95f6df15c
+  FEBio is a registered trademark.                                         
+  copyright (c) 2006-2021 - All rights reserved                            
+                                                                           
+===========================================================================
+
+
+Setting parameter "scale" to : 0
+
+
+
+ FILES USED
+===========================================================================
+	Input file : /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel.feb
+	Plot file  : /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel.xplt
+	Log file   : /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel.txt
+
+
+ MESH INFO
+===========================================================================
+	Number of materials ............................ : 1
+	Number of domains .............................. : 1
+	Number of nodes ................................ : 1700
+	Number of solid elements ....................... : 1188
+
+
+ CONTROL DATA
+===========================================================================
+	Module type .................................... : solid
+	Analysis type .................................. : quasi-static
+	Number of timesteps ............................ : 10
+	Time step size ................................. : 1
+	Auto time stepper activated .................... : yes
+	  Optimal nr of iterations ..................... : 6
+	  Minimum allowable step size .................. : 0.01
+	  Maximum allowable step size .................. : 1
+	Number of load controllers ..................... : 1
+
+
+ SOLVER PARAMETERS
+===========================================================================
+	symmetric_stiffness ............................... : 1
+	equation_scheme ................................... : 0
+	equation_order .................................... : 0
+	optimize_bw ....................................... : 0
+	lstol ............................................. : 0.9
+	lsmin ............................................. : 0.01
+	lsiter ............................................ : 5
+	max_refs .......................................... : 50
+	check_zero_diagonal ............................... : false
+	zero_diagonal_tol ................................. : 0
+	force_partition ................................... : 0
+	reform_each_time_step ............................. : true
+	reform_augment .................................... : false
+	diverge_reform .................................... : true
+	do_reforms ........................................ : true
+	etol .............................................. : 0.01
+	rtol .............................................. : 0
+	min_residual ...................................... : 1e-20
+	max_residual ...................................... : 0
+	qnmethod .......................................... : 0
+	max_ups ........................................... : 0
+	qn_max_buffer_size ................................ : 0
+	qn_cycle_buffer ................................... : true
+	cmax .............................................. : 100000
+	dtol .............................................. : 0.001
+	rhoi .............................................. : -2
+	alpha ............................................. : 1
+	beta .............................................. : 0.25
+	gamma ............................................. : 0.5
+	logSolve .......................................... : false
+	arc_length ........................................ : 0
+	arc_length_scale .................................. : 0
+
+
+ OUTPUT DATA
+===========================================================================
+	plot level ................................ : major iterations
+	plotfile format ........................... : FEBIO
+		Nodal Variables:
+			displacement         (type = vec3f, format = NODE)
+			reaction forces      (type = vec3f, format = NODE)
+		Domain Variables:
+			stress               (type = mat3fs, format = ITEM)
+			relative volume      (type = float, format = ITEM)
+		Surface Variables:
+			contact pressure     (type = float, format = ITEM)
+
+
+ MATERIAL DATA
+===========================================================================
+  1 - Material1 (type: neo-Hookean)
+	mat_axis .......................................... : (can't display value)
+	density ........................................... : 1
+	secant_tangent .................................... : false
+	secant_stress ..................................... : false
+	E ................................................. : 336.398
+	v ................................................. : 0.49999
+
+
+ BOUNDARY CONDITION DATA
+===========================================================================
+  1 -  Type: fix
+	dofs .............................................. : 0
+---------------------------------------------------------------------------
+  2 -  Type: fix
+	dofs .............................................. : 1
+---------------------------------------------------------------------------
+  3 -  Type: fix
+	dofs .............................................. : 2
+---------------------------------------------------------------------------
+  4 -  Type: fix
+	dofs .............................................. : 0
+---------------------------------------------------------------------------
+  5 -  Type: fix
+	dofs .............................................. : 1
+---------------------------------------------------------------------------
+  6 -  Type: prescribe
+	relative .......................................... : false
+	scale ............................................. : 1
+	dof ............................................... : 2
+
+
+ LINEAR SOLVER DATA
+===========================================================================
+	Solver type ....................................... : pardiso
+	Matrix format ..................................... : symmetric
+
+
+===== beginning time step 1 : 1 =====
+
+Setting parameter "scale" to : 0.0246967
+
+Reforming stiffness matrix: reformation #1
+
+===== reforming stiffness matrix:
+	Nr of equations ........................... : 5015
+	Nr of nonzeroes in stiffness matrix ....... : 161925
+ 1
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.445118e+09    1.580796e+02    0.000000e+00 
+	   energy              2.932556e+03    4.416356e-04    2.932556e+01 
+	   displacement        3.740250e-01    3.740250e-01    3.740250e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 1
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.445118e+09    4.616487e-09    0.000000e+00 
+	   energy              2.932556e+03    1.019661e-09    2.932556e+01 
+	   displacement        3.740250e-01    4.954708e-09    3.740615e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 1
+
+
+Data Record #1
+===========================================================================
+Step = 1
+Time = 1
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 1
+Time = 1
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 1
+Time = 1
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 2 : 2 =====
+
+Setting parameter "scale" to : 0.0493933
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 2
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444781e+09    1.568347e+02    0.000000e+00 
+	   energy              2.932073e+03    4.369312e-04    2.932073e+01 
+	   displacement        3.740971e-01    3.740971e-01    3.740971e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 2
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444781e+09    4.533572e-09    0.000000e+00 
+	   energy              2.932073e+03    1.003172e-09    2.932073e+01 
+	   displacement        3.740971e-01    4.910561e-09    3.741334e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 2
+
+
+Data Record #1
+===========================================================================
+Step = 2
+Time = 2
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 2
+Time = 2
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 2
+Time = 2
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 3 : 3 =====
+
+Setting parameter "scale" to : 0.07409
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 3
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444445e+09    1.556036e+02    0.000000e+00 
+	   energy              2.931591e+03    4.322932e-04    2.931591e+01 
+	   displacement        3.741692e-01    3.741692e-01    3.741692e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 3
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444445e+09    4.452523e-09    0.000000e+00 
+	   energy              2.931591e+03    9.870066e-10    2.931591e+01 
+	   displacement        3.741692e-01    4.866049e-09    3.742054e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 3
+
+
+Data Record #1
+===========================================================================
+Step = 3
+Time = 3
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 3
+Time = 3
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 3
+Time = 3
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 4 : 4 =====
+
+Setting parameter "scale" to : 0.0987867
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 4
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444111e+09    1.543847e+02    0.000000e+00 
+	   energy              2.931112e+03    4.277160e-04    2.931112e+01 
+	   displacement        3.742409e-01    3.742409e-01    3.742409e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 4
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.444111e+09    4.373117e-09    0.000000e+00 
+	   energy              2.931112e+03    9.711393e-10    2.931112e+01 
+	   displacement        3.742409e-01    4.821982e-09    3.742770e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 4
+
+
+Data Record #1
+===========================================================================
+Step = 4
+Time = 4
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 4
+Time = 4
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 4
+Time = 4
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 5 : 5 =====
+
+Setting parameter "scale" to : 0.123483
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 5
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443778e+09    1.531781e+02    0.000000e+00 
+	   energy              2.930634e+03    4.231986e-04    2.930634e+01 
+	   displacement        3.743124e-01    3.743124e-01    3.743124e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 5
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443778e+09    4.295282e-09    0.000000e+00 
+	   energy              2.930634e+03    9.555614e-10    2.930634e+01 
+	   displacement        3.743124e-01    4.778355e-09    3.743483e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 5
+
+
+Data Record #1
+===========================================================================
+Step = 5
+Time = 5
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 5
+Time = 5
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 5
+Time = 5
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 6 : 6 =====
+
+Setting parameter "scale" to : 0.14818
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 6
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443446e+09    1.519835e+02    0.000000e+00 
+	   energy              2.930158e+03    4.187404e-04    2.930158e+01 
+	   displacement        3.743836e-01    3.743836e-01    3.743836e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 6
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443446e+09    4.219000e-09    0.000000e+00 
+	   energy              2.930158e+03    9.402689e-10    2.930158e+01 
+	   displacement        3.743836e-01    4.735163e-09    3.744194e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 6
+
+
+Data Record #1
+===========================================================================
+Step = 6
+Time = 6
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 6
+Time = 6
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 6
+Time = 6
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 7 : 7 =====
+
+Setting parameter "scale" to : 0.172877
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 7
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443116e+09    1.508009e+02    0.000000e+00 
+	   energy              2.929685e+03    4.143401e-04    2.929685e+01 
+	   displacement        3.744545e-01    3.744545e-01    3.744545e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 7
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.443116e+09    4.144241e-09    0.000000e+00 
+	   energy              2.929685e+03    9.252557e-10    2.929685e+01 
+	   displacement        3.744545e-01    4.692400e-09    3.744901e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 7
+
+
+Data Record #1
+===========================================================================
+Step = 7
+Time = 7
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 7
+Time = 7
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 7
+Time = 7
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 8 : 8 =====
+
+Setting parameter "scale" to : 0.197573
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 8
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442787e+09    1.496300e+02    0.000000e+00 
+	   energy              2.929213e+03    4.099970e-04    2.929213e+01 
+	   displacement        3.745251e-01    3.745251e-01    3.745251e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 8
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442787e+09    4.070968e-09    0.000000e+00 
+	   energy              2.929213e+03    9.105145e-10    2.929213e+01 
+	   displacement        3.745251e-01    4.650061e-09    3.745605e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 8
+
+
+Data Record #1
+===========================================================================
+Step = 8
+Time = 8
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 8
+Time = 8
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 8
+Time = 8
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 9 : 9 =====
+
+Setting parameter "scale" to : 0.22227
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 9
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442459e+09    1.484707e+02    0.000000e+00 
+	   energy              2.928743e+03    4.057102e-04    2.928743e+01 
+	   displacement        3.745954e-01    3.745954e-01    3.745954e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 9
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442459e+09    3.999142e-09    0.000000e+00 
+	   energy              2.928743e+03    8.960412e-10    2.928743e+01 
+	   displacement        3.745954e-01    4.608142e-09    3.746307e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 9
+
+
+Data Record #1
+===========================================================================
+Step = 9
+Time = 9
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 9
+Time = 9
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 9
+Time = 9
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+===== beginning time step 10 : 10 =====
+
+Setting parameter "scale" to : 0.246967
+
+Reforming stiffness matrix: reformation #1
+
+ 1
+ Nonlinear solution status: time= 10
+	stiffness updates             = 0
+	right hand side evaluations   = 2
+	stiffness matrix reformations = 1
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442133e+09    1.473228e+02    0.000000e+00 
+	   energy              2.928275e+03    4.014790e-04    2.928275e+01 
+	   displacement        3.746654e-01    3.746654e-01    3.746654e-07 
+Reforming stiffness matrix: reformation #2
+
+ 2
+ Nonlinear solution status: time= 10
+	stiffness updates             = 0
+	right hand side evaluations   = 3
+	stiffness matrix reformations = 2
+	step from line search         = 1.000000
+	convergence norms :     INITIAL         CURRENT         REQUIRED
+	   residual            1.442133e+09    3.928731e-09    0.000000e+00 
+	   energy              2.928275e+03    8.818297e-10    2.928275e+01 
+	   displacement        3.746654e-01    4.566637e-09    3.747006e-07 
+
+convergence summary
+    number of iterations   : 2
+    number of reformations : 2
+
+------- converged at time : 10
+
+
+Data Record #1
+===========================================================================
+Step = 10
+Time = 10
+Data = ux;uy;uz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_disp_out.txt
+
+Data Record #2
+===========================================================================
+Step = 10
+Time = 10
+Data = Rx;Ry;Rz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_force_out.txt
+
+Data Record #3
+===========================================================================
+Step = 10
+Time = 10
+Data = sz
+File = /Users/s2986149/Desktop/GIBBON_studies/2022_Maria_Gomez_Cerezo_NPerevoshchikova_PET_scaffold/data/temp/tempModel_stress_out.txt
+
+
+ N O N L I N E A R   I T E R A T I O N   I N F O R M A T I O N
+
+	Number of time steps completed .................... : 10
+
+	Total number of equilibrium iterations ............ : 20
+
+	Average number of equilibrium iterations .......... : 2
+
+	Total number of right hand evaluations ............ : 30
+
+	Total number of stiffness reformations ............ : 20
+
+
+ L I N E A R   S O L V E R   S T A T S
+
+	Total calls to linear solver ........ : 20
+
+	Avg iterations per solve ............ : 1
+
+	Time in linear solver: 0:00:00
+
+
+ Elapsed time : 0:00:00
+
+ T I M I N G   I N F O R M A T I O N
+
+	Input time ...................... : 0:00:00 (0 sec)
+
+	Initialization time ............. : 0:00:01 (1 sec)
+
+	Solve time ...................... : 0:00:00 (0 sec)
+
+	   IO-time (plot, dmp, data) .... : 0:00:01 (1 sec)
+
+	   reforming stiffness .......... : 0:00:00 (0 sec)
+
+	   evaluating stiffness ......... : 0:00:00 (0 sec)
+
+	   evaluating residual .......... : 0:00:00 (0 sec)
+
+	   model update ................. : 0:00:00 (0 sec)
+
+	   QN updates ................... : 0:00:00 (0 sec)
+
+	   time in linear solver ........ : 0:00:00 (0 sec)
+
+	Total elapsed time .............. : 0:00:01 (1 sec)
+
+
+ N O R M A L   T E R M I N A T I O N
+
